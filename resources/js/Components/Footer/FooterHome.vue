@@ -36,13 +36,10 @@
         <div class="mb-6 md:mb-0">
           <a href="https://flowbite.com/" class="flex items-center">
             <img
-              src="https://flowbite.com/docs/images/logo.svg"
+              :src="`${$page.props.ziggy.url}/assets/images/logo.png`"
               class="h-8 mr-3"
               alt="FlowBite Logo"
             />
-            <span
-              class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
-              >Flowbite</span
             >
           </a>
         </div>
