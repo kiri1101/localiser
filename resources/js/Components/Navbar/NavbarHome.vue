@@ -1,20 +1,20 @@
 <template>
-    <nav class=" border-gray-200 bg-[#2E3F6E]">
-        <div class="flex flex-wrap items-center justify-between p-4 mx-auto">
-            <div class="flex items-center justify-between gap-1 md:gap-4">
+    <nav class="border-gray-200 bg-[#2E3F6E]">
+        <div class="flex items-center justify-between p-4 mx-auto">
+            <div class="flex items-center justify-between gap-4">
                 <Link href="https://flowbite.com/" class="flex items-center">
-                <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />
+                <img :src="`${$page.props.ziggy.url}/assets/images/logo.png`" class="max-h-[2rem]" alt="Flowbite Logo" />
                 </Link>
 
                 <button type="button"
-                    class="flex justify-between px-2 py-2 transition-all duration-300 rounded-full md:px-5 md:w-32 bg-sky-500 hover:bg-sky-400">
+                    class="flex self-end sm:items-center justify-between sm:py-2 sm:px-2 lg:px-6 transition-all duration-300 rounded-full lg:w-32 sm:bg-sky-500 sm:hover:bg-sky-400 text-white">
                     <Search />
-                    <span class="hidden md:block">|</span>
-                    <span class="hidden md:block">Search</span>
+                    <span class="hidden lg:block text-xs">|</span>
+                    <span class="hidden lg:block text-xs">Search</span>
                 </button>
             </div>
 
-            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+            <div class="hidden w-full lg:block md:w-auto" id="navbar-default">
                 <ul
                     class="flex flex-col p-4 mt-4 text-sm font-medium rounded-lg md:p-0 md:flex-row md:space-x-8 md:mt-0 md:border-0">
                     <li>
@@ -42,7 +42,6 @@
                         <template #trigger>
                             <button type="button" data-dropdown-toggle="language-dropdown-menu"
                                 class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white rounded-lg cursor-pointer hover:bg-sky-700">
-
                                 <Globe />
 
                                 <span class="ml-2">En</span>
@@ -50,12 +49,8 @@
                         </template>
 
                         <template #content>
-                            <DropdownLink :href="route('home')">
-                                French
-                            </DropdownLink>
-                            <DropdownLink :href="route('home')">
-                                English
-                            </DropdownLink>
+                            <DropdownLink :href="route('home')"> French </DropdownLink>
+                            <DropdownLink :href="route('home')"> English </DropdownLink>
                         </template>
                     </Dropdown>
 
@@ -80,12 +75,8 @@
                         </template>
 
                         <template #content>
-                            <DropdownLink :href="route('profile.edit')">
-                                Home
-                            </DropdownLink>
-                            <DropdownLink :href="route('profile.edit')">
-                                About
-                            </DropdownLink>
+                            <DropdownLink :href="route('profile.edit')"> Home </DropdownLink>
+                            <DropdownLink :href="route('profile.edit')"> About </DropdownLink>
                             <DropdownLink :href="route('logout')" method="post" as="button">
                                 Log Out
                             </DropdownLink>
@@ -104,7 +95,6 @@ import Search from "@/Components/SVG/Search.vue";
 import Globe from "@/Components/SVG/Globe.vue";
 import Dropdown from "@/Components/Dropdown.vue";
 import DropdownLink from "@/Components/DropdownLink.vue";
-
 </script>
 
 <style lang="scss" scoped></style>

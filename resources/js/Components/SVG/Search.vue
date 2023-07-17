@@ -1,5 +1,5 @@
 <template>
-    <svg class="w-3 h-3 bg-transparent sm:w-5 sm:h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg class="w-5 h-5 bg-transparent" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clip-path="url(#clip0_15_152)">
             <rect width="24" height="24" />
             <circle cx="10.5" cy="10.5" r="6.5" class="stroke-2 stroke-white" stroke-linejoin="round" />
