@@ -3,7 +3,7 @@
     <div>
       <NavbarHome />
 
-      <main class="w-full overflow-hidden">
+      <main class="relative">
         <slot />
       </main>
     </div>
