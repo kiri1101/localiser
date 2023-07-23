@@ -19,6 +19,7 @@
         "vue": "^3.2.41"
     },
     "dependencies": {
+        "@splidejs/vue-splide": "^0.6.12",
         "echarts": "^5.4.2",
         "vue-echarts": "^6.6.0"
     }

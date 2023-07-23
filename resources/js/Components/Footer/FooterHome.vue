@@ -1,14 +1,13 @@
 <template>
-  <footer class="bg-[#2E3F6E]">
+  <footer class="bg-[#2E3F6E] text-white">
     <div class="w-full p-4 py-6 mx-auto max-w-screen-2xl lg:py-8">
       <div class="flex items-center flex-shrink-0 w-full p-4 mx-auto">
         <form action="#" class="flex flex-col items-center justify-between w-full md:flex-row">
-          <label for="email"
-            class="flex-shrink-0 mb-2 mr-auto text-sm font-medium text-gray-500 md:mb-0 md:mr-4 dark:text-gray-400 md:m-0">Sign
+          <label for="email" class="flex-shrink-0 mb-2 mr-auto text-sm font-medium md:mb-0 md:mr-4  md:m-0">Sign
             up for our newsletter</label>
           <div class="justify-end w-full md:flex">
             <input type="email" id="email" placeholder="Enter your email"
-              class="bg-white border border-gray-300 text-gray-900 md:w-64 mb-2 md:mb-0 md:mr-4 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              class="bg-white border border-gray-300 text-gray-900 md:w-64 mb-2 md:mb-0 md:mr-4 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-500 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
               required />
             <button type="submit"
               class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full md:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
@@ -25,15 +24,14 @@
         <div class="mb-6 md:mb-0">
           <a href="https://flowbite.com/" class="flex items-center">
             <img :src="`${$page.props.ziggy.url}/assets/images/logo.png`" class="h-8 mr-3" alt="FlowBite Logo" />
-            >
           </a>
         </div>
         <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
           <div>
-            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+            <h2 class="mb-6 text-sm font-semibold uppercase text-white">
               Resources
             </h2>
-            <ul class="font-medium text-gray-500 dark:text-gray-400">
+            <ul class="font-medium">
               <li class="mb-4">
                 <a href="https://flowbite.com/" class="hover:underline">Flowbite</a>
               </li>
@@ -43,10 +41,10 @@
             </ul>
           </div>
           <div>
-            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+            <h2 class="mb-6 text-sm font-semibold uppercase">
               Follow us
             </h2>
-            <ul class="font-medium text-gray-500 dark:text-gray-400">
+            <ul class="font-medium">
               <li class="mb-4">
                 <a href="https://github.com/themesberg/flowbite" class="hover:underline">Github</a>
               </li>
@@ -56,10 +54,10 @@
             </ul>
           </div>
           <div>
-            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+            <h2 class="mb-6 text-sm font-semibold uppercase">
               Legal
             </h2>
-            <ul class="font-medium text-gray-500 dark:text-gray-400">
+            <ul class="font-medium">
               <li class="mb-4">
                 <a href="#" class="hover:underline">Privacy Policy</a>
               </li>
