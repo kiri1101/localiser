@@ -11,13 +11,17 @@ class HomeController extends Controller
 {
     /**
      * Summary of index
-     * 
+     *
      * Load home page
-     * 
+     *
      * @return \Inertia\Response
      */
     public function index(): Response
     {
         return Inertia::render('Home/Index');
+    }
+
+    public function getData(){
+
     }
 }
