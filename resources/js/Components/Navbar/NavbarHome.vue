@@ -2,7 +2,7 @@
   <nav class=" border-gray-200 bg-[#2E3F6E]">
     <div class="flex items-center justify-between p-4 mx-auto">
       <div class="flex items-center justify-between gap-4">
-        <Link href="https://flowbite.com/" class="flex items-center">
+        <Link :href="route('home')" class="flex items-center">
         <img :src="`${$page.props.ziggy.url}/assets/images/logo.png`" class="max-h-[2rem]" alt="Site Logo" />
         </Link>
 
@@ -54,9 +54,9 @@
             </template>
           </Dropdown>
 
-          <button type="button" class="p-1 rounded hover:bg-sky-700">
-            <User />
-          </button>
+          <Link :href="route('login')" class="p-1 rounded hover:bg-sky-700">
+          <User />
+          </Link>
 
           <Dropdown align="right" width="64">
             <template #trigger>

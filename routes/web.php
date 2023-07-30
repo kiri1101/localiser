@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Core\HomeController;
+use App\Http\Controllers\LikeController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -18,6 +19,11 @@ use Inertia\Inertia;
 */
 Route::controller(HomeController::class)->group(function () {
     Route::get('/', 'index')->name('home');
+});
+
+Route::controller(LikeController::class)->group(function () {
+    Route::post('/users/{user}/enterprises/{enterprise}/like', 'store')->name('like');
+    Route::delete('/likes/{like}', 'delete')->name('like.delete');
 });
 
 

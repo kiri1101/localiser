@@ -2,14 +2,15 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Enterprise extends Model
 {
-    use HasFactory;
-    use SoftDeletes;
+    use HasFactory, SoftDeletes;
 
     /**
      * The attributes that are mass assignable.
@@ -80,7 +81,8 @@ class Enterprise extends Model
         'localisation_email',
         'localisation_fax',
         'localisation_siteweb'
-        ,'deleted_at'
+        ,
+        'deleted_at'
     ];
 
     /**
@@ -127,5 +129,13 @@ class Enterprise extends Model
         return $this->hasMany(Commentaire::class, 'enterprise_id');
     }
 
-
+    /**
+     * The likes that belong to the Enterprise
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function likes(): BelongsToMany
+    {
+        return $this->belongsToMany(User::class, 'likes');
+    }
 }

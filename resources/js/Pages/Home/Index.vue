@@ -2,7 +2,7 @@
   <Head title="Home" />
 
   <FrontEndLayout>
-    <section class="hero">
+    <section id="hero" class="hero">
       <div class="grid min-h-[28rem] xl:min-h-[33rem] bg-gradient-to-b from-gray-900/60 via-gray-900/40 to-gray-900/20">
         <div class="self-center w-11/12 mx-auto rounded-lg shadow-lg bg-white/95 h-80 sm:w-9/12">
           <Chart />
@@ -229,11 +229,14 @@
         <ul id="list-group" class="grid sm:grid-cols-2 md:grid-cols-3 gap-4 justify-center">
           <li class="inline-block">
             <div
-              class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 overflow-hidden">
+              class="relative w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 overflow-hidden">
               <a href="#">
                 <img class="object-center object-cover transition-all duration-700 ease-out rounded-t-lg hover:scale-105"
                   :src="`${$page.props.ziggy.url}/assets/images/all/48.jpg`" alt="product image" />
               </a>
+
+              <i class="fa-regular fa-heart absolute top-0 text-white ml-4 mt-4 text-3xl cursor-pointer"></i>
+
               <div class="px-5 pb-5">
                 <a href="#">
                   <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Apple Watch Series 7 GPS,

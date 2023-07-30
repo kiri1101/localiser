@@ -20,8 +20,4 @@ class HomeController extends Controller
     {
         return Inertia::render('Home/Index');
     }
-
-    public function getData(){
-
-    }
 }
